@@ -1,0 +1,14 @@
+
+body {
+    background-image: linear-gradient(to left, #4951bf, #0c0c2d);
+}
+h1 {
+    color: rgb(17, 36, 255);
+    font-weight: bold;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-size: 100px;
+    text-align: left;
+}
