@@ -1,14 +1,140 @@
-
 body {
-    background-image: linear-gradient(to left, #4951bf, #0c0c2d);
+    background-image: linear-gradient(to left, #343469, #0c0c2d);
 }
 h1 {
-    color: rgb(17, 36, 255);
+    font-family: Century ;
+    color: #0D189A;;
     font-weight: bold;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: 10px;
+    padding-left:20px;
     padding-bottom: 10px;
-    font-size: 100px;
+    font-size: 75px;
     text-align: left;
+    background:rgb(148, 147, 147);
+    margin: -8px -64px 7px auto;
+    border-radius: 5px;
+}
+
+.t0{ font-family: Century;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background:rgb(148, 147, 147);
+    text-align: center;
+}
+
+.t1{ font-family: Century;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.t2{
+    background-color:#D3D3D3;
+    border-radius: 5px;
+}
+
+.b{font-family: Century;
+    color: Black;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    background-color: red;
+    border-radius: 5px;}
+
+.b:hover {
+    font-family: Century;
+    color: Black;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    background-color: limegreen;
+    border-radius: 10px;
+    width: 150px;
+    height: 75px;
+}
+
+.wrap {
+    margin: 2px;
+    padding: 20px;
+    padding-right: 934px;
+    background: rgb(8, 7, 7);
+    min-height: 950px;
+    overflow: hidden;}
+
+.sidebar {
+    font-family: Century;
+    color: rgb(3, 19, 106);
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    background: rgb(148, 147, 147);
+    min-height: 360px;
+    min-width: 1291px;
+    border-radius: 5px;
+}
+.d1{    position: absolute;
+    right: 150px;
+    margin: 27px 447px 0px auto;
+    width: 34%;
+    float: right;
+    min-height: 100px;
+    min-width: 390px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    width: 130px;
+    background:rgb(148, 147, 147);
+}
+
+li a {
+    display: block;
+    border-radius: 5px;
+    color: #000;
+    font-family: Century ;
+    font-weight: bold;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.b1{
+    font-family: Century;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    float: left;
+}
+.b2{
+    position: absolute;
+    right: 549px;
+    font-family: Century;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    float: right;
+}
+.b3{position: absolute;
+    right: 32px;
+    font-family: Century;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    float: right;
 }
