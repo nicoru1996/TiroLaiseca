@@ -3,28 +3,176 @@
 <head>
     <link rel="stylesheet" href="css1.css" type="text/css">
     <meta charset="UTF-8">
+    <title>Tiro Laiseca</title>
 </head>
 <body>
-                          <header>
-                              <title>Tiro Laiseca</title>
-                              <h1>Tiro Laiseca.com</h1>
-                              <div>
-                                  <img src="http://www.gifs-animados.es/games-imagenes/games-imagenes/angry-birds/gifs-animados-angry-birds-142079.gif">
-                              </div>
-
+<header>
+    <h1>Tiro Laiseca.com</h1>
+    <br>
+    <link rel="icon" href="favicon-96x96.png" type="image/png"  property="96x96"">
 </header>
+<ul>
+    <li><a href="Index.html">Inicio </a></li>
+    <li><a href="tutorial.html">Tutorial</a> </li>
+    <li><a href="contacto.asp">Contacto</a></li>
+</ul>
+<div align="right">
+    <input type="button" class="b" value="Calcular!" onclick="calcular()"/">
+</div>
+<br>
+<div class="wrap">
+    <div class="sidebar">
+        <br>
+        <div class=b1>
+            <div class="t0">
+                Valores Iniciales
+            </div>
+            <br>
+            <div>
+                Velocidad Inicial
+            </div>
+            <input type="number" name="Velocidad Inicial" class="t2" placeholder="Velocidad Inicial">
+            <select name="Unidades">
+                <option value="m/s">m/s</option>
+                <option value="Km/h">km/h</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                Altura Inicial
+            </div>
+            <input type="number" name="AlturaInicial" class="t2" placeholder="Altura Inicial">
+            <select name="Unidades">
+                <option value="m">m</option>
+                <option value="Km">km</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                Ángulo
+            </div>
+            <input type="number" name="Ángulo" class="t2" placeholder="Ángulo">
+            <select name="Unidades">
+                <option value="deg">deg</option>
+                <option value="rad">rad</option>
+            </select>
+        </div>
+        <div class=b2>
+            <div class="t0">
+                Valores Finales
+            </div>
+            <br>
+            <div>
+                Velocidad Final
+            </div>
+            <input type="number" name="Velocidad Final" class="t2" placeholder="Velocidad Final">
+            <select name="Unidades">
+                <option value="m/s">m/s</option>
+                <option value="Km/h">km/h</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                Altura Final
+            </div>
+            <input type="number" name="AlturaFinal" class="t2" placeholder="Altura Final">
+            <select name="Unidades">
+                <option value="m">m</option>
+                <option value="Km">km</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                Distancia Final
+            </div>
+            <input type="number" name="DistanciaFinal" class="t2" placeholder="Distancia Final">
+            <select name="Unidades">
+                <option value="m">m</option>
+                <option value="Km">km</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                <div>
+                    Tiempo Total
+                </div>
+                <input type="number" name="Tiempo Total" class="t2" placeholder="Tiempo Total">
+                <select name="Unidades">
+                    <option value="seg">seg</option>
+                    <option value="min">min</option>
+                </select>
+            </div>
+        </div>
+        <div class=b3>
+            <div class="t0">
+                Resultados:
+            </div>
+            <br>
+            <div>
+                Velocidad
+            </div>
+            <input type="number" name="Velocidad" class="t2" placeholder="Velocidad">
+            <select name="Unidades">
+                <option value="m/s">m/s</option>
+                <option value="Km/h">km/h</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                Altura
+            </div>
+            <input type="number" name="Altura" class="t2" placeholder="Altura">
+            <select name="Unidades">
+                <option value="m">m</option>
+                <option value="Km">km</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                Distancia
+            </div>
+            <input type="number" name="Distancia" class="t2" placeholder="Distancia">
+            <select name="Unidades">
+                <option value="m">m</option>
+                <option value="Km">km</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                <div>
+                    Tiempo
+                </div>
+                <input type="number" name="Tiempo" class="t2" placeholder="Tiempo">
+                <select name="Unidades">
+                    <option value="seg">seg</option>
+                    <option value="min">min</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <div>
+                Ángulo
+            </div>
+            <input type="number" name="Ángulo" class="t2" placeholder="Ángulo">
+            <select name="Unidades">
+                <option value="deg">deg</option>
+                <option value="rad">rad</option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="d1">
+        <img src="http://www.gifs-animados.es/games-imagenes/games-imagenes/angry-birds/gifs-animados-angry-birds-142079.gif" style="
+    width: 750px;">
+        <div>
+            <input type="range" id="t" name="tiempo" value="t" style="width: 750px;">
+        </div>
+    </div>
+</div>
+<br>
 
-                          <input type="number" name="value" title="Velocidad Inicial">
-                          <br>
-                          <input type="number" name="value">
-                          <br>
-                          <input type="number" name="value">
-                          <br>
-                          <input type="number" name="value">
-                          <br>
-                          <input type="number" name="value">
-                          <br>
-                          <input type="number" name="value">
-</body>
 
 </html>
+
+
+
