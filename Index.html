@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="css1.css" type="text/css">
+    <script type="text/javascript" src="calculo.js"></script>
     <meta charset="UTF-8">
     <title>Tiro Laiseca</title>
 </head>
@@ -14,14 +16,13 @@
 <ul>
     <li><a href="Index.html">Inicio </a></li>
     <li><a href="tutorial.html">Tutorial</a> </li>
-    <li><a href="contacto.asp">Contacto</a></li>
+    <li><a href="https://github.com/nicoru1996">Contacto</a></li>
 </ul>
 <div align="right">
-    <input type="button" class="b" value="Calcular!" onclick="calcular()"/">
+    <input type="button" class="b" value="Calcular!" onclick="dibujar()""/">
 </div>
 <br>
-<div class="wrap">
-    <div class="sidebar">
+<div class="sidebar">
         <br>
         <div class=b1>
             <div class="t0">
@@ -31,7 +32,7 @@
             <div>
                 Velocidad Inicial
             </div>
-            <input type="number" name="Velocidad Inicial" class="t2" placeholder="Velocidad Inicial">
+            <input type="number" name="Velocidad Inicial" class="t2" placeholder="Velocidad Inicial" id="Velocidad Inicial">
             <select name="Unidades">
                 <option value="m/s">m/s</option>
                 <option value="Km/h">km/h</option>
@@ -51,7 +52,7 @@
             <div>
                 Ángulo
             </div>
-            <input type="number" name="Ángulo" class="t2" placeholder="Ángulo">
+            <input type="number" name="Ángulo" class="t2" placeholder="Ángulo" id="Ángulo">
             <select name="Unidades">
                 <option value="deg">deg</option>
                 <option value="rad">rad</option>
@@ -159,15 +160,10 @@
                 <option value="rad">rad</option>
             </select>
         </div>
-    </div>
-    <br>
-    <div class="d1">
-        <img src="http://www.gifs-animados.es/games-imagenes/games-imagenes/angry-birds/gifs-animados-angry-birds-142079.gif" style="
-    width: 750px;">
-        <div>
-            <input type="range" id="t" name="tiempo" value="t" style="width: 750px;">
-        </div>
-    </div>
+</div>
+<br>
+<div class="wrap">
+    <canvas id="canvas" width="1365" height="550"  style="background-color: lightskyblue">
 </div>
 <br>
 
