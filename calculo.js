@@ -1,7 +1,8 @@
 function dibujar() {
     var ang = document.getElementById("Ángulo").value;
-    var vel0 = document.getElementById("Velocidad Inicial").value;
     var angRad = ang*Math.PI/180;
+    var vel0 = document.getElementById("Velocidad Inicial").value;
+    var Alt0 = document.getElementById("Altura Inicial").value;
 
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -22,6 +23,11 @@ function dibujar() {
         ctx.stroke();
         x=x+7;
     }
-    alert(ang+vel0);
 
+    var dist= ((Math.pow(vel0,2))*Math.sin(2*angRad))/9.8;
+    var hmax=(Alt0+(Math.pow(vel0,2)*Math.pow(Math.sin(angRad),2))/(2*9.8));
+    alert(vel0);
+    alert(ang);
+    alert(dist);
+    alert(hmax);
 }
