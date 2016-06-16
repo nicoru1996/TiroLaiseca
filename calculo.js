@@ -25,9 +25,13 @@ function dibujar() {
     }
 
     var dist= ((Math.pow(vel0,2))*Math.sin(2*angRad))/9.8;
-    var hmax=(Alt0+(Math.pow(vel0,2)*Math.pow(Math.sin(angRad),2))/(2*9.8));
-    alert(vel0);
-    alert(ang);
+    var hmax=((Math.pow(vel0,2)*Math.pow(Math.sin(angRad),2))/(2*9.8))+Alt0;
+    var tiem=(2*vel0*Math.sin(2*angRad))/9.81;
+    var tiemax=(vel0*Math.sin(angRad))/9.81;
+
     alert(dist);
+    alert(tiem);
     alert(hmax);
+    alert(tiemax);
+    
 }
