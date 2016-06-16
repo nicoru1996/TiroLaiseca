@@ -1,6 +1,7 @@
 body {
     background-image: linear-gradient(to right, #e7f6ff, #bddcff);
-}
+}  /*cuerpo*/
+
 h1 {
     font-family: Century ;
     color: #0D189A;;
@@ -12,7 +13,7 @@ h1 {
     background: rgb(199, 207, 231);
     margin: -8px 0px 7px auto;
     border-radius: 5px;
-}
+} /*Titulo grande*/
 
 .t0{ font-family: Century;
     color: white;
@@ -20,26 +21,26 @@ h1 {
     font-size: 18px;
     background: rgb(199, 207, 231);
     text-align: center;
-}
+} /*Titulo iniciales*/
 
 .t1{ font-family: Century;
     color: black;
     font-weight: bold;
     font-size: 14px;
     border-radius: 5px;
-}
+} /*Titulo finales*/
 
 .t2{
     background-color: #c7cfe7;
     border-radius: 5px;
-}
+} /*Titulo placeholder*/
 
 .b{font-family: Century;
     color: Black;
     font-size: 18px;
     text-align: center;
     background-color: red;
-    border-radius: 5px;}
+    border-radius: 5px;} /*boton calcular*/
 
 .b:hover {
     font-family: Century;
@@ -51,7 +52,7 @@ h1 {
     border-radius: 20px;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-}
+} /*boton calcular hover*/
 
 .wrap {
     margin: 2px;
@@ -60,7 +61,7 @@ h1 {
     background: rgb(8, 7, 7);
     height: canvas.height+20px;
     width: canvas.width;
-    overflow: hidden;}
+    overflow: hidden;} /*reborde canvas*/
 
 .sidebar {
     font-family: Century;
@@ -72,7 +73,8 @@ h1 {
     min-height: 360px;
     min-width: 1291px;
     border-radius: 5px;
-}
+} /*botonera*/
+
 .d1{    position: absolute;
     right: 150px;
     margin: 27px 447px 0px auto;
@@ -80,7 +82,7 @@ h1 {
     float: right;
     min-height: 100px;
     min-width: 390px;
-}
+} /*recuadro botonera*/
 
 ul {
     list-style-type: none;
@@ -89,7 +91,7 @@ ul {
     border-radius: 5px;
     width: 130px;
     background: rgb(199, 207, 231);
-}
+} /*boton menu*/
 
 li a {
     display: block;
@@ -99,11 +101,11 @@ li a {
     font-weight: bold;
     padding: 8px 0 8px 16px;
     text-decoration: none;
-}
+} /*boton menu*/
 li a:hover {
     background-color: #555;
     color: white;
-}
+} /*boton menu hover*/
 
 .b1{
     font-family: Century;
@@ -114,7 +116,7 @@ li a:hover {
     text-align: center;
     width: 300px;
     float: left;
-}
+} /*div iniciales*/
 .b2{
     position: absolute;
     right: 600px;
@@ -126,7 +128,7 @@ li a:hover {
     text-align: center;
     width: 300px;
     float: right;
-}
+} /*div finales*/
 .b3{position: absolute;
     right: 110px;
     font-family: Century;
@@ -137,7 +139,7 @@ li a:hover {
     text-align: center;
     width: 300px;
     float: right;
-}
+} /*div resultados*/
 
 .manual{
     background-color: #c7cfe7;
@@ -146,14 +148,14 @@ li a:hover {
     padding: 50px 20px;
     font-size: 20px;
     text-align: center;
-}
+} /*tutorial*/
+
 .rb{font-family: Century;
     color: Black;
     font-size: 18px;
     text-align: center;
     background-color: red;
-    border-radius: 5px;}
-
+    border-radius: 5px;} /*boton tutorial*/
 .rb:hover {
     font-family: Century;
     color: #d1d1d1;
@@ -163,4 +165,4 @@ li a:hover {
     background-color: #860014;
     border-radius: 20px;
     -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+    transition-duration: 0.5s; /*boton tutorial hover*/
