@@ -1,5 +1,5 @@
 body {
-    background-image: linear-gradient(to left, #343469, #0c0c2d);
+    background-image: linear-gradient(to right, #e7f6ff, #bddcff);
 }
 h1 {
     font-family: Century ;
@@ -9,8 +9,8 @@ h1 {
     padding-bottom: 10px;
     font-size: 75px;
     text-align: left;
-    background:rgb(148, 147, 147);
-    margin: -8px -64px 7px auto;
+    background: rgb(199, 207, 231);
+    margin: -8px 0px 7px auto;
     border-radius: 5px;
 }
 
@@ -18,7 +18,7 @@ h1 {
     color: white;
     font-weight: bold;
     font-size: 18px;
-    background:rgb(148, 147, 147);
+    background: rgb(199, 207, 231);
     text-align: center;
 }
 
@@ -30,7 +30,7 @@ h1 {
 }
 
 .t2{
-    background-color:#D3D3D3;
+    background-color: #c7cfe7;
     border-radius: 5px;
 }
 
@@ -57,9 +57,9 @@ h1 {
 .wrap {
     margin: 2px;
     padding: 20px;
-    padding-right: 934px;
+    padding-right: 20px;
     background: rgb(8, 7, 7);
-    min-height: 950px;
+    min-height: 555px;
     overflow: hidden;}
 
 .sidebar {
@@ -68,7 +68,7 @@ h1 {
     font-weight: bold;
     font-size: 16px;
     text-align: center;
-    background: rgb(148, 147, 147);
+    background: rgb(199, 207, 231);
     min-height: 360px;
     min-width: 1291px;
     border-radius: 5px;
@@ -88,7 +88,7 @@ ul {
     padding: 0;
     border-radius: 5px;
     width: 130px;
-    background:rgb(148, 147, 147);
+    background: rgb(199, 207, 231);
 }
 
 li a {
@@ -117,7 +117,7 @@ li a:hover {
 }
 .b2{
     position: absolute;
-    right: 549px;
+    right: 600px;
     font-family: Century;
     color: black;
     font-weight: bold;
@@ -128,7 +128,7 @@ li a:hover {
     float: right;
 }
 .b3{position: absolute;
-    right: 32px;
+    right: 110px;
     font-family: Century;
     color: black;
     font-weight: bold;
