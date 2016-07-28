@@ -15,10 +15,10 @@ function dibujar() {
     ctx.stroke();
 
     //Calculos
-    var dist= ((Math.pow(vel0,2))*Math.sin(2*angRad))/9.8; //*No tiene en cuenta altura inicial
-    var hmax=((Math.pow(vel0,2)*Math.pow(Math.sin(angRad),2))/(2*9.8))+Number(Alt0);
-    var tiem=(2*vel0*Math.sin(2*angRad))/9.81;
-    var tiemax=(vel0*Math.sin(angRad))/9.81;
+    var dist = ((Math.pow(vel0,2))*Math.sin(2*angRad))/9.8; //*No tiene en cuenta altura inicial
+    var hmax = (Alt0+((Math.pow(vel0,2)*Math.pow(Math.sin(angRad),2))/(2*9.8)));
+    var tiem = (2*vel0*Math.sin(2*angRad))/9.81;
+    var tiemax = (vel0*Math.sin(angRad))/9.81;
 
     //graficador //**Todavia no funciona con Altura Inicial. solo calculo.
     for(var x=10; x<dist; ){
