@@ -23,7 +23,7 @@
     <li><a href="https://github.com/nicoru1996">Contacto</a></li>
 </ul>
 <div align="right">
-    <input type="button" class="b" value="Calcular!" onclick="dibujar()">
+    <input type="button" class="b" value="Calcular!" onclick="verificarTodo()">
 </div>
 <br>
 <div class="sidebar">
@@ -37,7 +37,7 @@
             <div>
                 Velocidad Inicial
             </div>
-            <input type="number" name="Velocidad Inicial" class="t2" placeholder="Velocidad Inicial" id="velocidadInicial">
+            <input type="number" name="Velocidad Inicial" class="t2" placeholder="Velocidad Inicial" id="velocidadInicial" onblur="verificarValor(this.id)">
             <select name="Unidades" id="Unidadesv0">
                 <option value="m/s">m/s</option>
                 <option value="Km/h">km/h</option>
@@ -47,7 +47,7 @@
             <div>
                 Altura Inicial
             </div>
-            <input type="number" name="AlturaInicial" class="t2" placeholder="Altura Inicial" id="Altura Inicial">
+            <input type="number" name="Altura Inicial" class="t2" placeholder="Altura Inicial" id="AlturaInicial" onblur="verificarValor(this.id)">
             <select name="Unidadesh0" id="Unidadesh0">
                 <option value="m">m</option>
                 <option value="Km">km</option>
@@ -57,7 +57,7 @@
             <div>
                 Ángulo
             </div>
-            <input type="number" name="Ángulo" class="t2" placeholder="Ángulo" id="Ángulo">
+            <input type="number" name="Ángulo" class="t2" placeholder="Ángulo" id="Angulo" onblur="verificarValor(this.id)">
             <select name="Unidadesa0" id="Unidadesa0">
                 <option value="deg">deg</option>
                 <option value="rad">rad</option>
