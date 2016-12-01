@@ -13,10 +13,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"  >
 </head>
 <body>
-<header>
-    <div class="jumbotron text-center">
-    <h1>Tiro Laiseca.com</h1>
-    <br>
+<header class="h1">
+    <h1> <img id="imgMenuSup" name="imgMenuSup" src="logo002.jpg">Tiro Laiseca.com</h1>
         </div>
 </header>
 <ul>
@@ -29,6 +27,7 @@
 </div>
 <br>
 <div class="sidebar">
+    <form name="calculoTO">
         <br>
         <div class=b1>
             <div class="t0">
@@ -38,8 +37,8 @@
             <div>
                 Velocidad Inicial
             </div>
-            <input type="number" name="Velocidad Inicial" class="t2" placeholder="Velocidad Inicial" id="Velocidad Inicial">
-            <select name="Unidades">
+            <input type="number" name="Velocidad Inicial" class="t2" placeholder="Velocidad Inicial" id="velocidadInicial">
+            <select name="Unidades" id="Unidadesv0">
                 <option value="m/s">m/s</option>
                 <option value="Km/h">km/h</option>
             </select>
@@ -49,7 +48,7 @@
                 Altura Inicial
             </div>
             <input type="number" name="AlturaInicial" class="t2" placeholder="Altura Inicial" id="Altura Inicial">
-            <select name="Unidades">
+            <select name="Unidadesh0" id="Unidadesh0">
                 <option value="m">m</option>
                 <option value="Km">km</option>
             </select>
@@ -59,76 +58,20 @@
                 Ángulo
             </div>
             <input type="number" name="Ángulo" class="t2" placeholder="Ángulo" id="Ángulo">
-            <select name="Unidades">
+            <select name="Unidadesa0" id="Unidadesa0">
                 <option value="deg">deg</option>
                 <option value="rad">rad</option>
             </select>
         </div>
         <div class=b2>
             <div class="t0">
-                Valores Finales
-            </div>
-            <br>
-            <div>
-                Velocidad Final
-            </div>
-            <input type="number" name="Velocidad Final" class="t2" placeholder="Velocidad Final">
-            <select name="Unidades">
-                <option value="m/s">m/s</option>
-                <option value="Km/h">km/h</option>
-            </select>
-            <br>
-            <br>
-            <div>
-                Altura Final
-            </div>
-            <input type="number" name="AlturaFinal" class="t2" placeholder="Altura Final">
-            <select name="Unidades">
-                <option value="m">m</option>
-                <option value="Km">km</option>
-            </select>
-            <br>
-            <br>
-            <div>
-                Distancia Final
-            </div>
-            <input type="number" name="DistanciaFinal" class="t2" placeholder="Distancia Final">
-            <select name="Unidades">
-                <option value="m">m</option>
-                <option value="Km">km</option>
-            </select>
-            <br>
-            <br>
-            <div>
-                <div>
-                    Tiempo Total
-                </div>
-                <input type="number" name="Tiempo Total" class="t2" placeholder="Tiempo Total">
-                <select name="Unidades">
-                    <option value="seg">seg</option>
-                    <option value="min">min</option>
-                </select>
-            </div>
-        </div>
-        <div class=b3>
-            <div class="t0">
                 Resultados:
             </div>
             <br>
             <div>
-                Velocidad (h max)
+                Altura Máxima
             </div>
-            <input type="number" name="Velocidad" class="t2" placeholder="Velocidad" id="Velymax">
-            <select name="Unidades">
-                <option value="m/s">m/s</option>
-                <option value="Km/h">km/h</option>
-            </select>
-            <br>
-            <br>
-            <div>
-                Altura
-            </div>
-            <input type="number" name="Altura" class="t2" placeholder="Altura" id="hcal">
+            <input type="number" name="altmax" class="t2" placeholder="Altura Máxima" id="altmax">
             <select name="Unidades">
                 <option value="m">m</option>
                 <option value="Km">km</option>
@@ -136,9 +79,9 @@
             <br>
             <br>
             <div>
-                Distancia
+                Distancia del máximo
             </div>
-            <input type="number" name="Distancia" class="t2" placeholder="Distancia" id="distcal">
+            <input type="number" name="disthmax" class="t2" placeholder="Distancia del máximo" id="disthmax">
             <select name="Unidades">
                 <option value="m">m</option>
                 <option value="Km">km</option>
@@ -146,30 +89,48 @@
             <br>
             <br>
             <div>
-                <div>
-                    Tiempo
-                </div>
-                <input type="number" name="Tiempo" class="t2" placeholder="Tiempo" id="tiemcal">
-                <select name="Unidades">
-                    <option value="seg">seg</option>
-                    <option value="min">min</option>
-                </select>
+                Distancia Total
             </div>
+            <input type="number" id="DistanciaFinal" name="DistanciaFinal" class="t2" placeholder="Distancia Final">
+            <select name="Unidades">
+                <option value="m">m</option>
+                <option value="Km">km</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                Tiempo hasta el máximo
+            </div>
+            <input type="number" id="tiemhmax" name="tiemhmax" class="t2" placeholder="Tiempo hasta el máximo" >
+            <select name="Unidades">
+                <option value="seg">seg</option>
+                <option value="min">min</option>
+            </select>
+            <br>
+            <br>
+            <div>
+                Tiempo de vuelo
+            </div>
+            <input type="number" id="Tiempovuelo" name="Tiempovuelo" class="t2" placeholder="Tiempo de vuelo">
+            <select name="Unidades">
+                <option value="seg">seg</option>
+                <option value="min">min</option>
+            </select>
             <br>
             <br>
             <div>
                 Ángulo
             </div>
-            <input type="number" name="Ángulo" class="t2" placeholder="Ángulo" id="angcal">
+            <input type="number" name="Ángulo" class="t2" placeholder="Ángulo" id="ang1cal">
             <select name="Unidades">
                 <option value="deg">deg</option>
                 <option value="rad">rad</option>
             </select>
         </div>
+    </form>
 </div>
-<br>
 <div class="wrap">
-    <canvas id="canvas" width="1290" height="520"  style="background-color: lightskyblue">
+    <canvas id="canvas" width="1300" height="580px"  style="background-color:#1b85c9">
 </div>
 <br>
 
