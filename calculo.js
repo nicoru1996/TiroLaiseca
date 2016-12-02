@@ -40,32 +40,34 @@ function dibujar() {
     if (alt0Un != "m") {
            Alt0 =Alt0 * 1000;
            }
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    canvas.width = canvas.width; //Blanquear canvas
 
     //Calculos
     if (Alt0==0){
         var tiem = (2*vel0*Math.sin(ang))/9.81;
            }
-       else {
-        var tiem = ((vel0*Math.sin(ang)+Math.sqrt(Math.pow(vel0*Math.sin(ang),2)+2*9.81))/9.81)
+    else {
+        var tiem = (vel0*Math.sin(ang)+Math.sqrt(Math.pow(vel0*Math.sin(ang),2)+2*9.81*Alt0))/9.81;
               }
-       if (Alt0==0){
-              var tiemax = (vel0*Math.sin(ang))/9.81;
-           }
-       else {
-               var tiemax = ((vel0*Math.sin(ang)+Math.sqrt(Math.pow(vel0*Math.sin(ang),2)+2*9.81))/9.81)
-               }
-       var hmax = (Number(Alt0)+((Math.pow(vel0,2)*Math.pow(Math.sin(ang),2))/(2*9.8)));
-    var dmax = vel0*Math.cos(ang)*tiemax;
+    var tiemax = (vel0*Math.sin(ang))/9.81;
+    var hmax = (Number(Alt0)+((Math.pow(vel0,2)*Math.pow(Math.sin(ang),2))/(2*9.8)));
     if (Alt0==0) {
         var dist = ((Math.pow(vel0, 2)) * Math.sin(2 * ang)) / 9.81;
-           }
-       else{
-               var dist = vel0*Math.cos(ang)*tiem;
-           }
+    }
+    else{
+        var dist = vel0*Math.cos(ang)*tiem;
+    }
 
+    if (Alt0==0) {
+        var dmax = dist / 2;
+    }
+    else{
+        var dmax = vel0*Math.cos(ang)*tiemax;
+    }
+
+    //Canvas
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    canvas.width = canvas.width; //Blanquear canvas
     var xMax= canvas.width;
     var yMax= canvas.height;
     var yPos;
@@ -84,32 +86,59 @@ function dibujar() {
     ctx.lineTo(xMax-margenEjes,yMax-margenEjes);
     ctx.stroke();
     ctx.closePath();
-
-    //Grafico
-    ctx.beginPath();
-    ctx.arc(0+margenEjes,yMax-margenEjes,5,0,2*Math.PI); //x,y,radio circulo,
-    ctx.stroke();
-
-    //graficador
-    for(var x=10; x<dist; ){
-           yPos = (x*Math.tan(ang)-((9.8*Math.pow(x,2))/(2*Math.pow(vel0,2)*Math.pow(Math.cos(ang),2))))+Number(Alt0);
-            ctx.arc(x,yMax-yPos,1,0,2*Math.PI);
-            ctx.strokeStyle="darkred";
-            ctx.stroke();
-            x=x+4;
-           if (ang==Math.PI/2){x=x/2}
-       }
+    
+    animar(ang,vel0,Alt0,dist,0);
+    
+    //Conversión resutados
+    var UHM = document.getElementById("uhm").value;
+    if (UHM != "m") {
+        hmax= hmax / 1000;
+    }
+    var UDM = document.getElementById("udm").value;
+    if (UDM != "m") {
+        dmax= dmax / 1000;
+    }
+    var UDT = document.getElementById("udt").value;
+    if (UDT != "m") {
+        dist= dist / 1000;
+    }
+    var UTM = document.getElementById("utm").value;
+    if (UTM != "s") {
+        tiemax= tiemax / 60;
+    }
+    var UTV = document.getElementById("utv").value;
+    if (UTV != "s") {
+        tiem = tiem /60;
+    }
 
     //Resultados
-    alert("Distancia: "+dist);
     document.getElementById("DistanciaFinal").value=Math.round(dist*100)/100;
-    alert("Distancia de alura máxima: "+dmax);
     document.getElementById("disthmax").value=Math.round(dmax*100)/100;
-    alert("Tiempo hasta el máximo: "+tiemax);
     document.getElementById("tiemhmax").value=Math.round(tiemax*100)/100;
-    alert("Tiempo de vuelo: "+tiem);
     document.getElementById("Tiempovuelo").value=Math.round(tiem*100)/100;
-    alert("Altura Máxima "+hmax);
     document.getElementById("altmax").value=Math.round(hmax*100)/100;
-    alert("Tiempo de Altura Máxima: "+tiemax);
+}
+
+function animar(ang,vel0,Alt0,dist,x) {
+
+
+    //Canvas
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var xMax= canvas.width;
+    var yMax= canvas.height;
+    var yPos;
+    var margenEjes=10;
+
+    ctx.beginPath();
+    //graficador
+        yPos = 10+(x*Math.tan(ang)-((9.8*Math.pow(x,2))/(2*Math.pow(vel0,2)*Math.pow(Math.cos(ang),2))))+Number(Alt0);
+        ctx.arc(x+10,yMax-yPos,2,0,2*Math.PI);
+        ctx.strokeStyle="darkred";
+        ctx.stroke();
+        x=x+4;
+    if(x<=dist)
+    setTimeout(function(){
+        animar(ang,vel0,Alt0,dist,x);
+    }, 40)
 }
